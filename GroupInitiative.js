@@ -11,7 +11,7 @@ on("chat:message", function(msg) {
             
             // For Each Selected Token, Add To Turn Order
             _.each(msg.selected, function(selected) {
-                var roll = Math.floor(Math.random() * (21 - 1) + 1);
+                var roll = Math.floor(Math.random() * 21);
                 
                 // add dex (blue counter) to roll
                 var obj = findObjs({_id: selected._id})[0];
